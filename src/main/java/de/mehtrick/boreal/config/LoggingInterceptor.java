@@ -10,7 +10,7 @@ import org.springframework.http.client.ClientHttpResponse;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class LoggingRequestInterceptor implements ClientHttpRequestInterceptor {
+public class LoggingInterceptor implements ClientHttpRequestInterceptor {
 
 	@Override
 	public ClientHttpResponse intercept(HttpRequest request, byte[] body, ClientHttpRequestExecution execution)

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import de.mehtrick.boreal.config.TaigaConfiguration;
+import de.mehtrick.boreal.config.TaigaTokenStore;
 import de.mehtrick.boreal.model.login.UserAuthenticationDetail;
 import de.mehtrick.boreal.model.login.UserInfo;
 
@@ -19,11 +20,15 @@ public class TaigaAuthenticationClient {
 	@Autowired
 	private RestTemplate resttemplate;
 
-	public UserAuthenticationDetail login(String username, String password) {
-		UserInfo userInfo = UserInfo.builder().username(username).password(password).build();
+	public UserAuthenticationDetail login() {
+		UserInfo userInfo = UserInfo.builder().username(taiga.getUsername()).password(taiga.getPassword()).build();
 		return resttemplate
 				.postForEntity(taiga.getUrl() + taiga.getBasepath() + endpint, userInfo, UserAuthenticationDetail.class)
 				.getBody();
+	}
+
+	public void loginAndStoreToken() {
+		TaigaTokenStore.token = login().getAuthToken();
 	}
 
 }

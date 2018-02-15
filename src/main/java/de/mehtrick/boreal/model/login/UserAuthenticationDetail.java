@@ -12,57 +12,60 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+import lombok.Data;
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({ "auth_token", "big_photo", "bio", "color", "email", "full_name", "full_name_display",
 		"gravatar_id", "id", "is_active", "lang", "max_memberships_private_projects", "max_memberships_public_projects",
 		"max_private_projects", "max_public_projects", "photo", "roles", "theme", "timezone", "total_private_projects",
 		"total_public_projects", "username" })
+@Data
 public class UserAuthenticationDetail implements Serializable {
 
 	@JsonProperty("auth_token")
-	public String authToken;
+	private String authToken;
 	@JsonProperty("big_photo")
-	public Object bigPhoto;
+	private Object bigPhoto;
 	@JsonProperty("bio")
-	public String bio;
+	private String bio;
 	@JsonProperty("color")
-	public String color;
+	private String color;
 	@JsonProperty("email")
-	public String email;
+	private String email;
 	@JsonProperty("full_name")
-	public String fullName;
+	private String fullName;
 	@JsonProperty("full_name_display")
-	public String fullNameDisplay;
+	private String fullNameDisplay;
 	@JsonProperty("gravatar_id")
-	public String gravatarId;
+	private String gravatarId;
 	@JsonProperty("id")
-	public Integer id;
+	private Integer id;
 	@JsonProperty("is_active")
-	public Boolean isActive;
+	private Boolean isActive;
 	@JsonProperty("lang")
-	public String lang;
+	private String lang;
 	@JsonProperty("max_memberships_private_projects")
-	public Object maxMembershipsPrivateProjects;
+	private Object maxMembershipsPrivateProjects;
 	@JsonProperty("max_memberships_public_projects")
-	public Object maxMembershipsPublicProjects;
+	private Object maxMembershipsPublicProjects;
 	@JsonProperty("max_private_projects")
-	public Object maxPrivateProjects;
+	private Object maxPrivateProjects;
 	@JsonProperty("max_public_projects")
-	public Object maxPublicProjects;
+	private Object maxPublicProjects;
 	@JsonProperty("photo")
-	public Object photo;
+	private Object photo;
 	@JsonProperty("roles")
-	public List<String> roles = null;
+	private List<String> roles = null;
 	@JsonProperty("theme")
-	public String theme;
+	private String theme;
 	@JsonProperty("timezone")
-	public String timezone;
+	private String timezone;
 	@JsonProperty("total_private_projects")
-	public Integer totalPrivateProjects;
+	private Integer totalPrivateProjects;
 	@JsonProperty("total_public_projects")
-	public Integer totalPublicProjects;
+	private Integer totalPublicProjects;
 	@JsonProperty("username")
-	public String username;
+	private String username;
 	@JsonIgnore
 	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 	private final static long serialVersionUID = 5561564051504287965L;

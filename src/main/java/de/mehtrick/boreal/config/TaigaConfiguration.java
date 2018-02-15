@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import lombok.Data;
 
 @Configuration
-@ConfigurationProperties(prefix = "boreal")
+@ConfigurationProperties(prefix = "taiga")
 @Data
 public class TaigaConfiguration {
 
@@ -17,5 +17,11 @@ public class TaigaConfiguration {
 	private String username;
 
 	private String password;
+
+	private Integer projectid;
+
+	public String getURLWithBasePath() {
+		return url + basepath;
+	}
 
 }
