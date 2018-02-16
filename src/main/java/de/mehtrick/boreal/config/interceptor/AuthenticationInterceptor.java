@@ -12,8 +12,8 @@ import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.stereotype.Component;
 
-import de.mehtrick.boreal.client.TaigaAuthenticationClient;
 import de.mehtrick.boreal.config.security.TaigaTokenStore;
+import de.mehtrick.boreal.endpoints.auth.client.TaigaAuthenticationClient;
 
 @Component
 public class AuthenticationInterceptor implements ClientHttpRequestInterceptor {

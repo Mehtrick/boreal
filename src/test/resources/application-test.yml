@@ -1,0 +1,6 @@
+taiga:
+  username: test
+  password: test
+  projectid: 1
+  projectslug: bla
+  url: https://test.de

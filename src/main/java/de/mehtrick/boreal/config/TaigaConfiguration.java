@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
-import de.mehtrick.boreal.client.TaigaProjectsClient;
-import de.mehtrick.boreal.model.projects.ProjectDetails;
+import de.mehtrick.boreal.endpoints.projects.client.TaigaProjectsClient;
+import de.mehtrick.boreal.endpoints.projects.model.ProjectDetails;
 import lombok.Data;
 
 @Configuration
@@ -30,6 +30,9 @@ public class TaigaConfiguration {
 
 	private Integer projectid;
 
+	/**
+	 * Used for getting the projectid
+	 */
 	private String projectslug;
 
 	public String getURLWithBasePath() {

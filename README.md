@@ -13,6 +13,40 @@ Taiga.io offers a [REST-Api](https://taigaio.github.io/taiga-doc/dist/api.html) 
 I am a Java-Guy. More so I love the Spring-Framework. So I decided to build a REST-Client with Spring which I can integrate into my projects. The first focus should be the Authentications against taiga and creation of new Tickets. Also the Framework should be configurable enough so i can use it in many different projects.
 
 ## Implemented APIs
-- Normal Authentication
-- Get Projects by Slug
-- Create Issue
+- [Normal login](https://taigaio.github.io/taiga-doc/dist/api.html#auth-normal-login)
+- [Get Projects by Slug](https://taigaio.github.io/taiga-doc/dist/api.html#projects-get-by-slug)
+- [Create Issue](https://taigaio.github.io/taiga-doc/dist/api.html#issues-create)
+
+## Build
+
+```
+gradlew clean build
+```
+
+## Import in Eclipse
+
+```
+gradlew cleanEclipse eclipse
+```
+## Configuration
+The following attributes can be configured over your application.yml. Before every attribute you have to set the prefix `taiga`
+
+|Name|Description|Default|Required|
+|----|-----------|-------|--------|
+|url | URL to your taiga.io Instance | https://api.taiga.io | false |
+|basepath| Path of the restendpoints | /api/v1 | false |
+|username| Name of the API-User|null| true |
+|password| Password of the API-User|null| true |
+|projectid| ID of your Project|null| false (if a projectslug is set) |
+|projectslug| Name of the API-User|null| false (if a projectid is set. If both are set the projectslug will be ignored) |
+
+###  Example 
+
+```
+taiga:
+  username: test
+  password: test
+  projectid: 1
+  projectslug: bla
+  url: https://test.com
+```
