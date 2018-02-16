@@ -50,3 +50,7 @@ taiga:
   projectslug: bla
   url: https://test.com
 ```
+
+### Enable more logging
+
+Set your log lvl `logging.level.de.mehtrick.boreal.endpoints` to `debug` to see the request and response objects
