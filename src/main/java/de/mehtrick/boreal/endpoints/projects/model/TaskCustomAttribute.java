@@ -3,6 +3,7 @@ package de.mehtrick.boreal.endpoints.projects.model;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;

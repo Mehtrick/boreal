@@ -12,15 +12,17 @@ public class TaigaIssuesClient extends AbstractTaigaClient {
 	private String endpoint = "/issues";
 
 	/**
-	 * Implementation of <a href="https://taigaio.github.io/taiga-doc/dist/api.html#issues-create">https://taigaio.github.io/taiga-doc/dist/api.html#issues-create</a>
+	 * Implementation of <a href=
+	 * "https://taigaio.github.io/taiga-doc/dist/api.html#issues-create">https://taigaio.github.io/taiga-doc/dist/api.html#issues-create</a>
+	 * 
 	 * @param issue
-	 * @see <a href="https://taigaio.github.io/taiga-doc/dist/api.html#issues-create">https://taigaio.github.io/taiga-doc/dist/api.html#issues-create</a>
+	 * @see <a href=
+	 *      "https://taigaio.github.io/taiga-doc/dist/api.html#issues-create">https://taigaio.github.io/taiga-doc/dist/api.html#issues-create</a>
 	 * @return Details of the newly created Issue
 	 */
 	public IssueDetail createIssue(IssueRequest issue) {
 		issue.setProject(taigaconfig.getProjectid());
-		return resttemplate.postForEntity(taigaconfig.getURLWithBasePath() + endpoint, issue, IssueDetail.class)
-				.getBody();
+		return resttemplate.postForEntity(taigaconfig.getURL() + endpoint, issue, IssueDetail.class).getBody();
 
 	}
 }

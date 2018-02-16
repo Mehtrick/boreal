@@ -51,8 +51,7 @@ public class TaigaAuthenticationClient {
 		RestTemplate restTemplate = new RestTemplate();
 		restTemplate.setInterceptors(Arrays.asList(new LoggingInterceptor()));
 		LoginRequest userInfo = LoginRequest.builder().username(username).password(password).build();
-		return restTemplate
-				.postForEntity(taigaconfig.getURLWithBasePath() + endpint, userInfo, UserAuthenticationDetail.class)
+		return restTemplate.postForEntity(taigaconfig.getURL() + endpint, userInfo, UserAuthenticationDetail.class)
 				.getBody();
 	}
 

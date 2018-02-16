@@ -20,7 +20,7 @@ public class TaigaConfiguration {
 	@Autowired
 	TaigaProjectsClient projectsClient;
 
-	private String url = "https://api.taiga.io";
+	private String host = "https://api.taiga.io";
 
 	private String basepath = "/api/v1";
 
@@ -35,8 +35,8 @@ public class TaigaConfiguration {
 	 */
 	private String projectslug;
 
-	public String getURLWithBasePath() {
-		return url + basepath;
+	public String getURL() {
+		return host + basepath;
 	}
 
 	/**

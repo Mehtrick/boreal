@@ -22,7 +22,7 @@ public class TaigaProjectsClient extends AbstractTaigaClient {
 	 */
 	public ProjectDetails getProjectDetailsBySlug(String slug) {
 		return resttemplate
-				.getForEntity(taigaconfig.getURLWithBasePath() + endpoint + "?slug=" + slug, ProjectDetails.class)
+				.getForEntity(taigaconfig.getURL() + endpoint + "?slug=" + slug, ProjectDetails.class)
 				.getBody();
 	}
 }
