@@ -33,7 +33,7 @@ The following attributes can be configured over your application.yml. Before eve
 
 |Name|Description|Default|Required|
 |----|-----------|-------|--------|
-|url | URL to your taiga.io Instance | https://api.taiga.io | false |
+|host | URL to your taiga.io Instance | https://api.taiga.io | false |
 |basepath| Path of the restendpoints | /api/v1 | false |
 |username| Name of the API-User|null| true |
 |password| Password of the API-User|null| true |
@@ -48,7 +48,7 @@ taiga:
   password: test
   projectid: 1
   projectslug: bla
-  url: https://test.com
+  host: https://test.com
 ```
 
 ### Enable more logging

@@ -3,4 +3,4 @@ taiga:
   password: test
   projectid: 1
   projectslug: bla
-  url: https://test.de
+  host: https://test.de
