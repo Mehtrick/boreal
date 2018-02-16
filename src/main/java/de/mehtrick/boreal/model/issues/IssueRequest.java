@@ -46,12 +46,15 @@ public class IssueRequest implements Serializable {
 	@JsonProperty("subject")
 	private String subject;
 	@JsonProperty("tags")
+	@Builder.Default
 	private List<String> tags = null;
 	@JsonProperty("type")
 	private Integer type;
 	@JsonProperty("watchers")
+	@Builder.Default
 	private List<Object> watchers = null;
 	@JsonIgnore
+	@Builder.Default
 	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 	private final static long serialVersionUID = 7358790239376656957L;
 

@@ -1,4 +1,4 @@
-package de.mehtrick.boreal.config;
+package de.mehtrick.boreal.config.security;
 
 import lombok.Data;
 

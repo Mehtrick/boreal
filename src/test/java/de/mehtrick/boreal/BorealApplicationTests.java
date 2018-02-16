@@ -15,11 +15,13 @@ import de.mehtrick.boreal.model.issues.IssueRequest;
 public class BorealApplicationTests {
 
 	@Autowired
-	TaigaIssuesClient issueClient;
+	private TaigaIssuesClient issueClient;
 
 	@Test
 	public void contextLoads() {
-		IssueDetail createIssue = issueClient.createIssue(IssueRequest.builder().subject("test").build());
+		IssueDetail createIssue = issueClient.createIssue(IssueRequest.builder().subject("Ich heiﬂe Marvin").build());
+		 issueClient.createIssue(IssueRequest.builder().subject("Ich heiﬂe Marvin").build());
+
 		System.out.println(createIssue.createdDate);
 	}
 

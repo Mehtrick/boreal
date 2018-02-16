@@ -1,7 +1,6 @@
 taiga:
   username: 
   password: 
-  projectid: 
 logging:
   level:
     de.mehtrick.boreal: DEBUG
